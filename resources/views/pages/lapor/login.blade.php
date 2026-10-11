@@ -9,7 +9,7 @@
         </div>
         <h1 class="flex justify-center items-center text-3xl font-bold mt-12 mb-4">Verifikasi Identitas</h1>
         <p class="flex justify-center items-center text-center text-gray-600 mb-6">
-            Pengaduan hanya dapat diajukan oleh korban langsung. Masukkan NIM Anda untuk dicari di MASTER/SIAKAD.</p>
+            Masukkan NIM Anda untuk dicari di MASTER/SIAKAD.</p>
         @if($errors->any())
             <div role="alert" class="mb-5 p-4 bg-red-50 text-red-700 rounded-lg">{{ $errors->first() }}</div>
         @endif

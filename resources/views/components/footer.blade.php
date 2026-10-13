@@ -38,12 +38,8 @@
             </div>
         </div>
         <div
-            class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-            <p>&copy; {{ date('Y') }} TIPD. Hak cipta dilindungi.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-black transition">Kebijakan Privasi</a>
-                <a href="#" class="hover:text-black transition">Syarat & Ketentuan</a>
-            </div>
+            class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-center items-center text-sm text-gray-600">
+            <p>&copy; {{ date('Y') }} Made With Love By TIPD. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

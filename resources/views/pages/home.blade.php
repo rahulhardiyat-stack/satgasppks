@@ -12,7 +12,7 @@
                         class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-xs font-semibold tracking-wide uppercase mb-6">
                         Satgas PPKS
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                    <h1 class="text-5xl max:text-6xl font-bold leading-tight mb-6">
                         Mewujudkan Kampus Aman, Nyaman, dan Bebas dari Kekerasan Seksual
                     </h1>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -33,7 +33,7 @@
                 <div class="span-7">
                     @if ($featuredArticles->first())
                         <a href="{{ route('article.detail', $featuredArticles->first()->slug) }}"
-                            class="block bg-gray-100 rounded-2xl overflow-hidden hover-lift">
+                            class="block bg-gray-100 rounded-2xl overflow-hidden hover-lift m-12">
                             @if ($featuredArticles->first()->featured_image_url)
                                 <img src="{{ $featuredArticles->first()->featured_image_url }}"
                                     alt="{{ $featuredArticles->first()->title }}" class="w-full aspect-[4/3] object-cover">
@@ -66,9 +66,9 @@
     </section>
 
     <!-- Featured Articles -->
-    <section class="py-20 px-6 bg-gray-50">
+    {{--<section class="py-20 px-6 bg-gray-50">
         <div class="max-w-7xl mx-auto">
-            <div class="flex items-end justify-between mb-12">
+            --}}{{--<div class="flex items-end justify-between mb-12">
                 <div>
                     <h2 class="text-4xl font-bold mb-3">Artikel Pilihan</h2>
                     <p class="text-gray-600">Konten terbaik yang dipilih khusus untuk Anda</p>
@@ -77,7 +77,7 @@
                     class="hidden md:block text-sm font-medium hover:text-blue-600 transition">
                     Lihat Semua →
                 </a>
-            </div>
+            </div>--}}{{--
 
             @if ($featuredArticles->count() > 0)
                 <div class="asymmetric-grid">
@@ -173,33 +173,34 @@
                 <p class="text-center text-gray-500">Belum ada artikel yang dipublikasikan.</p>
             @endif
         </div>
-    </section>
+    </section>--}}
 
     <!-- Values Section -->
     <section class="py-20 px-6 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Yang Kami Pegang Teguh</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Prinsip yang memandu setiap tulisan dan karya saya</p>
+                {{--<p class="text-xl text-gray-600 max-w-2xl mx-auto">Prinsip yang memandu setiap tulisan dan karya saya</p>--}}
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl text-center">
+                <div class="bg-white p-8 rounded-2xl text-center overflow-hidden hover-lift">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002
+                                  2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Kerahasian & Keamanan</h3>
                     <p class="text-gray-600">Identitas pelapor dan korban dijamin kerahasiaannya secara penuh.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white p-8 rounded-2xl text-center overflow-hidden hover-lift">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
                             </path>
                         </svg>
                     </div>
@@ -207,23 +208,23 @@
                     <p class="text-gray-600">Mengutamakan perlindungan, rasa aman, dan pemulihan fisik serta psikologis korban</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl text-center">
+                <div class="bg-white p-8 rounded-2xl text-center overflow-hidden hover-lift">
                     <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                  d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"></path>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Keadilan & Transparansi.</h3>
-                    <p class="text-gray-600">: Penanganan laporan dilakukan secara obyektif, independen,
+                    <p class="text-gray-600">Penanganan laporan dilakukan secara obyektif, independen,
                         dan sesuai prosedur hukum yang berlaku.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white p-8 rounded-2xl text-center overflow-hidden hover-lift">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
                             </path>
                         </svg>
                     </div>

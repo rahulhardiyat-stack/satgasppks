@@ -20,7 +20,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
+    {{--<section class="pt-32 pb-20 px-6">
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Jelajahi Kategori</h1>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -28,10 +28,10 @@
                 tersedia di sini.
             </p>
         </div>
-    </section>
+    </section>--}}
 
     <!-- Main Categories Grid -->
-    <section class="pb-20 px-6">
+    <section class="pt-32 pb-20 px-6">
         <div class="max-w-7xl mx-auto">
             @if ($categories->count() > 0)
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

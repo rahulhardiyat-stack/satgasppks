@@ -21,11 +21,13 @@
                     </p>
                     <div class="flex items-center space-x-4">
                         <a href="{{ route('lapor.index') }}"
-                            class="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition">
+                            class="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition
+                            overflow-hidden hover-lift rounded-md">
                             Lapor Kejadian
                         </a>
                         <a href="{{ route('categories') }}"
-                            class="border border-gray-300 px-8 py-3 font-medium hover:border-gray-900 transition">
+                            class="border border-gray-300 px-8 py-3 font-medium hover:border-gray-900 transition
+                            overflow-hidden hover-lift rounded-md">
                             Lihat Berita
                         </a>
                     </div>

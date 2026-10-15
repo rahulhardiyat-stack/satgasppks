@@ -10,24 +10,19 @@ use App\Http\Controllers\PpksController;
 use App\Http\Middleware\AuthenticateStudent;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/link-storage', function () {
-    Artisan::call('storage:link');
-    return 'Storage linked successfully!';
-});
-
 Route::prefix('lapor')->name('lapor.')->group(function () {
     Route::view('/pilih', 'pages.lapor.choose')->name('choose');
-//    Route::prefix('umum')->name('public.')->controller(\App\Http\Controllers\PublicPpksController::class)->group(function () {
-//        Route::get('/login', 'loginForm')->name('login');
-//        Route::post('/login', 'login')->middleware('throttle:10,1')->name('authenticate');
-//        Route::get('/registrasi', 'registerForm')->name('register');
-//        Route::post('/registrasi', 'register')->middleware('throttle:5,1')->name('register.store');
-//        Route::middleware(\App\Http\Middleware\AuthenticatePublicReporter::class)->group(function () {
-//            Route::get('/', 'index')->name('index');
-//            Route::post('/', 'store')->middleware('throttle:5,1')->name('store');
-//            Route::post('/logout', 'logout')->name('logout');
-//        });
-//    });
+    Route::prefix('umum')->name('public.')->controller(\App\Http\Controllers\PublicPpksController::class)->group(function () {
+        Route::get('/login', 'loginForm')->name('login');
+        Route::post('/login', 'login')->middleware('throttle:10,1')->name('authenticate');
+        Route::get('/registrasi', 'registerForm')->name('register');
+        Route::post('/registrasi', 'register')->middleware('throttle:5,1')->name('register.store');
+        Route::middleware(\App\Http\Middleware\AuthenticatePublicReporter::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::post('/', 'store')->middleware('throttle:5,1')->name('store');
+            Route::post('/logout', 'logout')->name('logout');
+        });
+    });
     Route::get('/{report:reference}/bukti/{index}', [PpksController::class, 'evidence'])->whereNumber('index')->name('evidence');
     Route::get('/login', [PpksController::class, 'loginForm'])->name('login');
     Route::post('/login', [PpksController::class, 'login'])->middleware('throttle:10,1')->name('authenticate');

@@ -20,18 +20,44 @@
             </a>
 
             {{-- Menu desktop --}}
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-4">
                 <a href="{{ route('home') }}"
-                   class="text-sm font-medium {{ request()->routeIs('home') ? 'text-blue-600' : 'hover:text-blue-600 transition' }}">Beranda</a>
+                   class="text-sm font-medium px-3 py-2 rounded-md transition
+                    {{ request()->routeIs('home') ? 'text-gray-900 bg-gray-100' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900' }}">
+                    Beranda
+                </a>
+
                 <a href="{{ route('articles') }}"
-                   class="text-sm font-medium {{ request()->routeIs('articles') ? 'text-blue-600' : 'hover:text-blue-600 transition' }}">Artikel</a>
+                   class="text-sm font-medium px-3 py-2 rounded-md transition
+                   {{ request()->routeIs('articles') ? 'text-gray-900 bg-gray-100' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900' }}">
+                    Artikel
+                </a>
+
                 <a href="{{ route('categories') }}"
-                   class="text-sm font-medium {{ request()->routeIs('categories') ? 'text-blue-600' : 'hover:text-blue-600 transition' }}">Kategori</a>
+                   class="text-sm font-medium px-3 py-2 rounded-md transition
+                   {{ request()->routeIs('categories') ? 'text-gray-900 bg-gray-100' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900' }}">
+                    Kategori
+                </a>
+
                 <a href="{{ route('about') }}"
-                   class="text-sm font-medium {{ request()->routeIs('about') ? 'text-blue-600' : 'hover:text-blue-600 transition' }}">Tentang</a>
+                   class="text-sm font-medium px-3 py-2 rounded-md transition
+                   {{ request()->routeIs('about') ? 'text-gray-900 bg-gray-100' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900' }}">
+                    Tentang
+                </a>
+
                 <a href="{{ route('lapor.choose') }}"
-                   class="text-sm font-medium {{ request()->routeIs('lapor.*') ? 'text-blue-600' : 'hover:text-blue-600 transition' }}">Lapor</a>
-                <button class="bg-black text-white px-6 py-2 text-sm font-medium hover:bg-gray-800 transition">Subscribe</button>
+                   class="text-sm font-medium px-3 py-2 rounded-md transition
+                   {{ request()->routeIs('lapor.*') ? 'text-gray-900 bg-gray-100' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900' }}">
+                    Lapor
+                </a>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='{{ route('filament.admin.auth.login') }}'"
+                    class="bg-black text-white px-6 py-2 rounded-md"
+                >
+                    Masuk
+                </button>
             </div>
 
             {{-- Tombol mobile: Lapor + hamburger --}}

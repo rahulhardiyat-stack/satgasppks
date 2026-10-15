@@ -50,7 +50,7 @@
     </section>
 
     <!-- Values Section -->
-    <section class="py-20 px-6 bg-gray-50">
+    {{--<section class="py-20 px-6 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Yang Kami Pegang Teguh</h2>
@@ -106,14 +106,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <!-- Stats Section -->
     <section class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Perjalanan Sejauh Ini</h2>
-                <p class="text-xl text-gray-600">Angka-angka yang mencerminkan dedikasi saya</p>
+                <p class="text-xl text-gray-600">Angka-angka yang mencerminkan dedikasi Kami</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

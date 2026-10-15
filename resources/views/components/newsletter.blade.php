@@ -17,7 +17,7 @@
 
 
         <div class="flex justify-center my-6">
-            <button class="bg-white text-black px-8 py-4 font-medium rounded-lg hover:bg-gray-100 transition">
+            <button class="bg-white text-black px-8 py-4 font-medium rounded-lg hover:bg-gray-100 transition overflow-hidden hover-lift">
                 <a href="{{ route('lapor.index') }}">Laporkan Segera</a>
             </button>
         </div>

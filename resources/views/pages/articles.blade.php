@@ -22,7 +22,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-6 border-b border-gray-100">
+    {{--<section class="pt-32 pb-16 px-6 border-b border-gray-100">
         <div class="max-w-7xl mx-auto">
             <div class="max-w-3xl">
                 <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Semua Artikel</h1>
@@ -31,7 +31,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <!-- Filter & Search Section -->
     <section class="py-8 px-6 bg-gray-50 sticky top-16 z-40 border-b border-gray-200">
@@ -68,7 +68,7 @@
 
     <!-- Articles Grid -->
     <section class="py-16 px-6">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto pt-16 pb-12">
             @if ($articles->count() > 0)
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($articles as $article)

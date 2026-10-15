@@ -35,7 +35,7 @@
                 <div class="span-7">
                     @if ($featuredArticles->first())
                         <a href="{{ route('article.detail', $featuredArticles->first()->slug) }}"
-                            class="block bg-gray-100 rounded-2xl overflow-hidden hover-lift m-12">
+                            class="block bg-gray-100 rounded-2xl overflow-hidden hover-lift">
                             @if ($featuredArticles->first()->featured_image_url)
                                 <img src="{{ $featuredArticles->first()->featured_image_url }}"
                                     alt="{{ $featuredArticles->first()->title }}" class="w-full aspect-[4/3] object-cover">

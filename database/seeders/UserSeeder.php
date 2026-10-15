@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 'email' => 'satgasppks@staindirundeng.ac.id',
                 'email_verified_at' => now(),
                 'remember_token' => Str::random(10),
-                'password' => bcrypt('password'),
+                'password' => bcrypt('3QQESzz$V'),
             ],
             [
                 'name' => 'admin',
@@ -30,14 +30,14 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'remember_token' => Str::random(10),
 
-                'password' => bcrypt('password'),
+                'password' => bcrypt('lP8^3wA~'),
             ],
             [
                 'name' => 'Hijrah',
                 'email' => 'hijrah@staindirundeng.ac.id',
                 'email_verified_at' => now(),
                 'remember_token' => Str::random(10),
-                'password' => bcrypt('password'),
+                'password' => bcrypt('m;EBEOT8'),
             ]
         ];
 
